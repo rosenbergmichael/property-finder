@@ -3,23 +3,11 @@
     <h1 class="h3 mb-3 fw-normal">Sign Up</h1> 
     <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "name@example.com" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
+      <%= f.email_field :first_name, autofocus: true, class: "form-control", placeholder: "First name" %>
+      <%= f.email_field :last_name, autofocus: true, class: "form-control", placeholder: "Last name" %>
+      <%= f.email_field :email, autocomplete: "email", class: "form-control", placeholder: "name@example.com" %>
       <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password confirmation" %>
-    </div>
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
   <% end %>
