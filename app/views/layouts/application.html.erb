@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <% if ["public","devise"].includes?(controller.controller_name) %>
+    <% if ["public","devise"].include?(controller.controller_name) %>
     <header>
       <%= render "layouts/nav/public" %>
     </header>
