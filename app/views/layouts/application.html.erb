@@ -16,12 +16,19 @@
     <% if ["public","devise"].include?(controller.controller_name) %>
     <header>
       <%= render "layouts/nav/public" %>
+      <%= yield %>
     </header>
     <% else %>
       <%= render "layouts/nav/dashboard" %>
+
+      <div class="container-fluid">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
     <% end %>
 
-    <%= yield %>
+   
 
     <%#= render "layouts/footer" %>
 
